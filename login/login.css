@@ -44,20 +44,23 @@ body, html {
   .icon {
     position: relative;
     vertical-align: middle;
-    padding: 0 1rem;
-
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #71767B;
   }
 
   .lock {
-    align-self: flex-start;
+    position: relative;
     vertical-align: middle;
-    padding:1rem 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #71767B;
   }
 
   /* Estilo palavra LOGIN e SENHA */
   .container input::placeholder {
     margin-bottom: 10px;
-    font-family: Inter;
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -67,6 +70,10 @@ body, html {
   }
   /* Estilo dos campos de entrada Login */
   .container input[type="text"] {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
     margin-bottom: 14px;
     width: 320px; /* ja foi */
     height: 22px;
@@ -86,6 +93,10 @@ body, html {
   
   /* Estilo dos campos de entrada SENHA */
   .container input[type="password"] {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
     margin-bottom: 14px;
     width: 320px;
     height: 22px;
@@ -104,8 +115,8 @@ body, html {
     align-items: center;
     background-color: #71767B;
     display: flex;
-    margin: 0rem 0 2rem 0;
-    border-radius: 14px;
+    margin: 0rem 0rem 2rem 0;
+    border-radius: 15px;
 
   } 
 
@@ -113,19 +124,15 @@ body, html {
     align-items: center;
     background-color: #71767B;
     display: flex;
-    margin: 0rem 0 2rem 0;
-    border-radius: 14px;
-
+    margin: 0rem 0 1rem 0;
+    border-radius: 15px;
   }
 
   .password-toggle {
     position: absolute;
-    left: 60%;
-    right: 50px;
-    top: 95%;
-    transform: translateY(-190%);
-    cursor: pointer;
+    translate: 21rem;
     z-index: 20;
+    cursor: pointer;
   }
   /* Estilo do botão de entrar */
   .container button[type="submit"]{
@@ -183,9 +190,9 @@ body, html {
     
   }
 .profile {
-    scale: 80%;
+    scale: 90%;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2.5rem 0 2rem 0;
 }
