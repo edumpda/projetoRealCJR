@@ -16,12 +16,13 @@ header {
 }
 
 .entradas {
+  
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-    
+  
 }
 
 /* inicio do body */
@@ -40,66 +41,100 @@ body, html {
 
 }
 
-/* Estilo palavra LOGIN */
-.container input::placeholder {
-  margin-bottom: 10px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  color: #222E50;
-  opacity: 0.7;
-}
+  .icon {
+    position: relative;
+    vertical-align: middle;
+    padding: 0 1rem;
 
+  }
+
+  .lock {
+    align-self: flex-start;
+    vertical-align: middle;
+    padding:1rem 1rem;
+  }
+
+  /* Estilo palavra LOGIN e SENHA */
+  .container input::placeholder {
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222E50;
+    opacity: 0.7;
+  }
   /* Estilo dos campos de entrada Login */
   .container input[type="text"] {
-    margin-bottom: 10px;
-    width: 360px; /* ja foi */
+    margin-bottom: 14px;
+    width: 320px; /* ja foi */
     height: 22px;
-    padding: 10px; /* ja foi */
+    padding: 14px; /* ja foi */
     left: 570px; /* ja foi */
     top: 312px;
+    z-index: 20;
+    margin: 0rem 0 0rem 0;
     background-color: #D9D9D9;
+    border: 0px;
     border-radius: 15px;
     cursor: pointer;
   }
       
+
+
+  
   /* Estilo dos campos de entrada SENHA */
   .container input[type="password"] {
-    padding-right: 30px;
-    margin-bottom: 10px;
-    width: 360px;
-    height: 22px;
-    padding: 10px; 
+    margin-bottom: 14px;
+    width: 320px;
     height: 22px;
     left: 570px;
-    top: 380px;
+    top: 312px;
+    padding: 14px; 
+    z-index: 20;
+    margin: 0rem 0 0rem 0;
     background-color: #D9D9D9;
+    border: 0px;
     border-radius: 15px;
     cursor: pointer;
   }
 
+  .login-container {
+    align-items: center;
+    background-color: #71767B;
+    display: flex;
+    margin: 0rem 0 2rem 0;
+    border-radius: 14px;
+
+  } 
+
   .password-container {
-    position: relative;
+    align-items: center;
+    background-color: #71767B;
+    display: flex;
+    margin: 0rem 0 2rem 0;
+    border-radius: 14px;
+
   }
 
   .password-toggle {
     position: absolute;
-    left: 87%;
-    right: 15px;
-    top: 43%;
-    transform: translateY(-50%);
+    left: 60%;
+    right: 50px;
+    top: 95%;
+    transform: translateY(-190%);
     cursor: pointer;
+    z-index: 20;
   }
   /* Estilo do botão de entrar */
   .container button[type="submit"]{
-    margin-bottom: 10px;
     width: 260px;
     height: 50px;
     left: 620px;
     top: 500px;
     padding: 20px; 
+    margin: 1rem 0 3rem 0;
     background-color: #D9D9D9;
     font-family: Inter;
     font-style: normal;
@@ -114,8 +149,9 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 0 0 0;
     width: 500px;
-    height: 470px;
+    height: auto;
     top: 227px;
     margin: 100px auto;
     background-color: #222E50;
@@ -127,7 +163,6 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
   }
 
   /* Estilo do botão de mostrar */
@@ -143,8 +178,14 @@ body, html {
     top: 300px;
     left: 40px;
     right: 48px;
-    background-color: #7b1f1f;
     color: #fff;
     border-radius: 4px;
     
   }
+.profile {
+    scale: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 2.5rem 0;
+}
