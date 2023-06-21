@@ -28,15 +28,23 @@
             <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../Login/login.html">Entrar</a>
         </div>
     </header>
-    <main>        
-        <div class="container">
+    <main>      
+        <div class="container"> 
+          
             <form action="/login" method="post">
-                <input type="text" id="registration" name="registration" required placeholder="Login"><br><br>
+              <img class="profile" src="../img/profile.png" alt="Profile"> 
+                <div class="login-container">
+                  <img class="icon" src="../img/icon.png" alt="Icon">
+                  <input type="text" id="registration" name="registration" required placeholder="Login"><br><br>
+                </div>
                 <div class="password-container">
+                  <img class="lock" src="../img/lock.png" alt="Icon">
                   <input type="password" id="password" name="password" required placeholder="Senha">
                   <img id="password-toggle" class="password-toggle" src="../img/Ativo 1.png" alt="Mostrar" onclick="mostrarSenha()">
+                
                 </div>
-                <p><a style="text-decoration:none;color:#111E3E;" href="../senha/esqueceuSenha.html">Esqueceu a senha?</a></p>
+                
+                <p><a style="color:#111E3E;margin: 1rem;" href="../senha/esqueceuSenha.html"><strong>Esqueceu a senha?</strong></a></p>
                 <button type="submit">Entrar</button>
             </form>
         </div> 
