@@ -4,20 +4,6 @@
     <title>Tela de Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="recup.css">
-    <script>
-        function mostrarSenha() {
-          var passwordInput = document.getElementById("password");
-          var passwordToggle = document.getElementById("password-toggle");
-    
-          if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordToggle.textContent = "Ocultar";
-          } else {
-            passwordInput.type = "password";
-            passwordToggle.textContent = "Mostrar";
-          }
-        }
-      </script>
 </head>
 
 <body>
@@ -31,19 +17,22 @@
     <main>      
       <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
       <div class="container"> 
-        
           <form action="/login" method="post">
             <h2 class="titulo">Bem vindo de volta,<br>fulano! escolha sua<br>nova senha</h2>   
-              <div class="login-container">
-                <input type="text" id="registration" name="registration" required placeholder="Login"><br><br>
+            <div class="container-entradas">
+              <div class="container-imput">
+                <label for="nome">Senha nova</label>
+                <input type="text" id="registration" name="registration">
               </div>
-              <div class="password-container">
-                <input type="password" id="password" name="password" required placeholder="Senha">
-              
+              <div class="container-imput">
+                <label for="nome">Digite novamente a senha</label>
+                <input type="password" id="password" name="password">
               </div>
-              
-              <p><a style="color:#111E3E;margin: 1rem;align-self: middle;" href="../senha/esqueceuSenha.html"><strong>Esqueceu a senha?</strong></a></p>
-              <button type="submit">Entrar</button>
+            </div> 
+            <div class="container-link">
+              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../senha/esqueceuSenha.html"><strong> Acesse aqui!</strong></a></p>
+              <button type="submit">Cadastrar</button>
+            </div>
           </form>
       </div> 
     </main>
