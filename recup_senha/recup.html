@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recup.css">
+    <script>
+        function mostrarSenha() {
+          var passwordInput = document.getElementById("password");
+          var passwordToggle = document.getElementById("password-toggle");
+    
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggle.textContent = "Ocultar";
+          } else {
+            passwordInput.type = "password";
+            passwordToggle.textContent = "Mostrar";
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <header>
+        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <div class="entradas">
+            <a style="text-decoration:none;color:#222e50;" href="../conta/criarConta.html">Criar Conta</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../Login/login.html">Entrar</a>
+        </div>
+    </header>
+    <main>      
+      <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
+      <div class="container"> 
+        
+          <form action="/login" method="post">
+            <h2 class="titulo">Bem vindo de volta,<br>fulano! escolha sua<br>nova senha</h2>   
+              <div class="login-container">
+                <input type="text" id="registration" name="registration" required placeholder="Login"><br><br>
+              </div>
+              <div class="password-container">
+                <input type="password" id="password" name="password" required placeholder="Senha">
+              
+              </div>
+              
+              <p><a style="color:#111E3E;margin: 1rem;align-self: middle;" href="../senha/esqueceuSenha.html"><strong>Esqueceu a senha?</strong></a></p>
+              <button type="submit">Entrar</button>
+          </form>
+      </div> 
+    </main>
+</body>
+</html>

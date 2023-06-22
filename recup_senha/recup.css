@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* inicio do header*/
+
+header {
+    background: #8BC34A;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+}
+.cjr {
+  background-color: #D9D9D9;
+  padding: 4px 32px 4px 32px;
+  border-radius: 16px;
+}
+
+.entradas {
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  
+}
+
+/* inicio do body */
+
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+  
+    /* Estilo básico para o corpo da página */
+    body {
+    font-family: Inter, sans-serif;
+    background-color: #111E3E;
+
+
+}
+
+
+  /* Estilo palavra LOGIN e SENHA */
+  .container input::placeholder {
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222E50;
+    opacity: 0.7;
+  }
+  /* Estilo dos campos de entrada Login */
+  .container input[type="text"] {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 14px;
+    width: 320px; /* ja foi */
+    height: 22px;
+    padding: 14px; /* ja foi */
+    left: 570px; /* ja foi */
+    top: 312px;
+    z-index: 20;
+    margin: 0rem 0 0rem 0;
+    background-color: #D9D9D9;
+    border: 0px;
+    border-radius: 15px;
+    cursor: text;
+  }
+      
+
+
+  
+  /* Estilo dos campos de entrada SENHA */
+  .container input[type="password"] {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 14px;
+    width: 320px;
+    height: 22px;
+    left: 570px;
+    top: 312px;
+    padding: 14px; 
+    z-index: 20;
+    margin: 0rem 0 0rem 0;
+    background-color: #D9D9D9;
+    border: 0px;
+    border-radius: 15px;
+    cursor: text;
+  }
+
+  .login-container {
+    align-items: center;
+    background-color: #71767B;
+    display: flex;
+    margin: 0rem 0rem 2rem 0;
+    border-radius: 15px;
+
+  } 
+
+  .password-container {
+    align-items: center;
+    background-color: #71767B;
+    display: flex;
+    margin: 0rem 0 1rem 0;
+    border-radius: 15px;
+  }
+
+
+  /* Estilo do botão de entrar */
+  .container button[type="submit"]{
+    width: 260px;
+    height: 50px;
+    left: 620px;
+    top: 500px;
+    padding: 20px; 
+    margin: 1rem 0 3rem 0;
+    background-color: #D9D9D9;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color:#222E50;
+    border-radius: 15px;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .logo-big {
+    position: absolute;
+    display: flex;
+    width: auto;
+    background-size: contain;
+  }
+  /* Estilo do contêiner do formulário de login */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem 3rem 2rem;
+    width: 500px;
+    height: auto;
+    top: 227px;
+    margin: 5rem 6rem 100px auto;
+    background-color: #222E50;
+    border-radius: 10px;
+  }
+
+  .container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  /* Estilo do botão de mostrar */
+  .container button {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 88px;
+    height: 20px;
+    padding: 20px;
+    top: 300px;
+    left: 40px;
+    right: 48px;
+    color: #fff;
+    border-radius: 4px;
+    
+  }
+.logo-big {
+  vertical-align: middle;
+}
+.titulo {
+  position: relative;
+  display: flex;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  align-self: right;
+  color: white;
+  margin-right: auto;
+}
