@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <header>
+        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <div class="entradas">
+            <a style="text-decoration:none;color:#222e50;" href="../conta/criarConta.html">Criar Conta</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../Login/login.html">Entrar</a>
+        </div>
+    </header>
+    <main>      
+      <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
+      <div class="container"> 
+          <form action="/login" method="post">
+            <img class="profile" src="../img/profilePhoto.png" alt="Profile">   
+            <div class="container-entradas">
+              <div class="container-nome">
+                <input type="text" id="registration" name="registration" required placeholder="Nome"><br><br>
+              </div>
+              <div class="container-genero">
+                <input type="text" id="registration" name="registration" required placeholder="Genero"><br><br>
+                <img id="genero" class="genero" src="../img/genero.png" alt="Mostrar" >
+              </div>
+              <div class="container-cargo">
+                <input type="text" id="registration" name="registration" required placeholder="Cargo"><br><br>
+              </div>
+              <div class="container-email">
+                <input type="text" id="registration" name="registration" required placeholder="Email"><br><br>
+              </div>
+              <div class="container-senha">
+                <input type="password" id="registration" name="registration" required placeholder="Senha"><br><br>
+              </div>
+            </div> 
+            <div class="container-link">
+              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../senha/esqueceuSenha.html"><strong> Acesse aqui!</strong></a></p>
+              <button type="submit">Cadastrar</button>
+            </div>
+          </form>
+      </div> 
+    </main>
+</body>
+</html>
