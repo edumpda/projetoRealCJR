@@ -63,21 +63,26 @@ main {
   .container-entradas {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+  }
+  .container-entradas div {
+    height: fit-content;
+   
   }
 
   .container-link {
     display: flex;
     flex-direction: column;
-    margin-top: 18px;
     align-items: center;
     color: #111E3E;
     font-weight: 700;
+    margin-top: 2rem;
+    gap: 1rem;
   }
 
   /* Estilo palavra LOGIN e SENHA */
   .container input::placeholder {
-    margin-bottom: 10px;
+    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -92,14 +97,13 @@ main {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 14px;
+    
     width: 320px; /* ja foi */
     height: 22px;
     padding: 14px; /* ja foi */
     left: 570px; /* ja foi */
     top: 312px;
     z-index: 20;
-    margin: -5rem 0 -5rem 0;
     background-color: #D9D9D9;
     border: 0px;
     border-radius: 15px;
@@ -115,14 +119,13 @@ main {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 14px;
+    
     width: 320px;
     height: 22px;
     left: 570px;
-    top: 312px;
+    
     padding: 14px; 
     z-index: 20;
-    margin: -5rem 0 0rem 0;
     background-color: #D9D9D9;
     border: 0px;
     border-radius: 15px;
@@ -133,7 +136,7 @@ main {
     align-items: center;
     background-color: #71767B;
     display: flex;
-    margin: 0rem 0rem 2rem 0;
+   
     border-radius: 15px;
 
   } 
@@ -142,9 +145,10 @@ main {
     align-items: center;
     background-color: #71767B;
     display: flex;
-    margin: 0rem 0 1rem 0;
+    
     border-radius: 15px;
   }
+
 
 
   /* Estilo do botão de entrar */
@@ -155,7 +159,7 @@ main {
     left: 620px;
     top: 500px;
     padding: 20px; 
-    margin: 0.5rem 0 3rem 0;
+    
     background-color: #D9D9D9;
     font-family: Inter;
     font-style: normal;
@@ -177,7 +181,6 @@ main {
   /* Estilo do contêiner do formulário de login */
   .container {
     display: flex;
-    margin: 0;
     justify-content: center;
     align-items: center;
     width: 547px;
@@ -188,6 +191,8 @@ main {
 
   .container form {
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -196,7 +201,6 @@ main {
 
   /* Estilo do botão de mostrar */
   .container button {
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,37 +215,72 @@ main {
     border-radius: 4px;
     
   }
-.logo-big {
-  vertical-align: middle;
-  width: auto;
-  height: 380px;
-}
+  .logo-big {
+    vertical-align: middle;
+    width: auto;
+    height: 380px;
+  }
 
-.profile {
-  scale: 60%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: -2rem 0 -2rem 0;
-}
+  .profile {
+    height: 30%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .container-genero {
+    position: relative;
+  }
 
-.genero{
-  position: absolute;
-  translate: 19rem -2.8rem;
-  z-index: 1000;
-  width: 30px;
-  height: 30px;
-}
+  .container-genero img {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+  }
 
-.titulo {
-  position: relative;
-  display: flex;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
-  align-self: right;
-  color: white;
-  margin-right: auto;
-}
+  #genero{
+    
+    width: 100% ;
+    height: fit-content;
+    left: 570px;
+    top: 312px;
+    padding: 15.5px; 
+    z-index: 20;
+    background-color: #D9D9D9;
+    
+    border-radius: 15px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    
+    align-self: right;
+    appearance: none;
+    color: rgba(34, 46, 80, 0.7);
+  }
+  select::-ms-expand {
+    display: none;
+  }
+
+  .titulo {
+    position: relative;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    align-self: right;
+    color: white;
+    margin-right: auto;
+  }
+
