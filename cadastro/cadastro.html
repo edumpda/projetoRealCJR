@@ -21,20 +21,27 @@
             <img class="profile" src="../img/profilePhoto.png" alt="Profile">   
             <div class="container-entradas">
               <div class="container-nome">
-                <input type="text" id="registration" name="registration" required placeholder="Nome"><br><br>
+                <input type="text" id="registration" name="registration" required placeholder="Nome">
               </div>
               <div class="container-genero">
-                <input type="text" id="registration" name="registration" required placeholder="Genero"><br><br>
-                <img id="genero" class="genero" src="../img/genero.png" alt="Mostrar" >
+                <label for="genero"><img src="../img/genero.png" alt="Mostrar"></label>
+                <select name="Gênero" id="genero">
+                  <option value="select" selected>Gênero</option>
+                  <option value="fem">Feminino</option>
+                  <option value="masc">Masculino</option>
+                  <option value="outro">Outro</option>
+                  <option value="nao-informar">Prefiro não informar</option>
+                </select>
               </div>
+              
               <div class="container-cargo">
-                <input type="text" id="registration" name="registration" required placeholder="Cargo"><br><br>
+                <input type="text" id="registration" name="registration" required placeholder="Cargo">
               </div>
               <div class="container-email">
-                <input type="text" id="registration" name="registration" required placeholder="Email"><br><br>
+                <input type="text" id="registration" name="registration" required placeholder="Email">
               </div>
               <div class="container-senha">
-                <input type="password" id="registration" name="registration" required placeholder="Senha"><br><br>
+                <input type="password" id="registration" name="registration" required placeholder="Senha">
               </div>
             </div> 
             <div class="container-link">
