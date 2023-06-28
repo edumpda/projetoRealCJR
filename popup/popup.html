@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <button id="post-button">Fazer post</button>
+
+    <div id="popup-overlay">
+        <div id="popup">
+            <h2>Fazer um novo post</h2>
+            <form>
+                <label for="post-title">Título:</label>
+                <input type="text" id="post-title">
+
+                <label for="post-content">Conteúdo:</label>
+                <textarea id="post-content"></textarea>
+                <div class="button-group">
+                <button id="cancel-button">Cancelar</button>
+                <button id="submit-button">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
