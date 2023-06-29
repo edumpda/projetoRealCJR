@@ -65,3 +65,13 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.header {
+    font-size: 20px;
+}
