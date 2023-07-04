@@ -12,7 +12,7 @@
 }
 
 #popup {
-    background-color: #222E50;
+    background-color: #111E3E;
     width: 80%;
     max-width: 600px;
     margin: 100px auto;
@@ -22,6 +22,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    display: flex;
 }
 
 .button-group {
@@ -67,11 +68,107 @@
 }
 
 .bold {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     font-weight: bold;
 }
+
+.bold-image {
+    max-width: 12px;
+    height: auto;
+    padding: 1rem 0.5rem 1rem 1.5rem;
+}
+
 .italic {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     font-style: italic;
 }
+
+.italic-image {
+    max-width: 15px;
+    height: auto;
+    padding: 1rem 0.5rem 1rem 0rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.link-image {
+    max-width: 15px;
+    height: auto;
+    padding: 0.9rem 0.5rem 1rem 0rem;
+}
+
+.image {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.image-image {
+    max-width: 15px;
+    height: auto;
+    padding: 0.9rem 0.5rem 1rem 0rem;
+}
+
+.help {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.help-image {
+    max-width: 15px;
+    height: auto;
+    padding: 0.9rem 0.5rem 1rem 0rem;
+}
+
 .header {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     font-size: 20px;
+}
+
+.header-image {
+    max-width: 15px;
+    height: auto;
+    padding: 1.1rem 0.5rem 1rem 0rem;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-radius: 16px;
+    background: #222E50;
+    width: 523px;
+    height: 331px;
+    flex-shrink: 0;
+}
+
+.mod-button {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.50);
+}  
+
+#post-content {
+    grid-row: 3;
+    background-color: inherit;
 }
