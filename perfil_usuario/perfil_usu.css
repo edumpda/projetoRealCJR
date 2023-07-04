@@ -43,6 +43,7 @@ body, html {
 }
 
 main {
+  
   display: flex;
   flex-direction: inherit;
   align-items: center;
@@ -57,7 +58,8 @@ main {
     width: 154px;
     height: 48px;
     right: 10px;
-    top: 10px;
+    top: 10px;  
+    margin-right: 1rem;
     border-radius: 10px;
     background-color: #111E3E;
     font-family: Inter;
@@ -67,20 +69,24 @@ main {
     line-height: 50px;
     color:#fff;
     border: 2px solid #000;
-    box-shadow: 0px 5px 6px #000;
+    box-shadow: 0px 3px 5px #00000088;
     
   }
 
   /* Estilo do contêiner do formulário de perfil */
   .container {
+    justify-content: center;
+    display: grid;
+    gap: 15px;
     width: 646px;
-    height: 935px;
+    height: auto;
     top: 87px;
     border: 0px 1px 0px 1px;
     border-left: 1px solid #D9D9D9;
     border-right: 1px solid #D9D9D9;
     border-color: #D9D9D9;
     background-color: #111E3E;
+    gap: 1rem;
   }
 
   .profile {
@@ -120,11 +126,12 @@ main {
   }
 
   .container-inferior{
-    width: 94%;
+    width: 92%;
     background-color: #222E50;
     color:#fff;
-    padding: 16px 16px 10px 16px;
-    border-radius: 19px;
+    justify-self: center;
+    padding: 16px 16px 16px 16px;
+    border-radius: 32px;
   }
 
   .container-inferior img{
@@ -146,7 +153,7 @@ main {
   .imagens{
     position: relative;
     border-bottom: 1px solid #D9D9D9;
-    padding: 10px 30px;
+    padding: 1.5rem 4rem;
   }
 
 
@@ -154,9 +161,10 @@ main {
 
   .textos1{
     position: relative;
-    padding: 1px 0px 0px 10px;
+    padding: 0px 0px 0px 1rem;
     color: #fff;
     font-weight: 500;
+    margin: 0px;
   }
 
   .image-name {
@@ -168,12 +176,12 @@ main {
 
 /*estilização da publicação 2*/
   .publi2{
-    width: 94%;
-    margin-top: 15px;
+    width: 92%;
+    justify-self: center;
     background-color: #222E50;
     color:#fff;
     padding: 20px 16px 16px 16px;
-    border-radius: 19px;
+    border-radius: 32px;
 
   }
   .publi2 p{
