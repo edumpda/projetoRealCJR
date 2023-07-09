@@ -14,12 +14,12 @@
                         <button class="bold" onclick="bold(event)"><img src="../img/bold.png" alt="bold" class="bold-image"></button>
                         <button class="italic" onclick="italic(event)"><img src="../img/italic.png" alt="italic" class="italic-image"></button>
                         <button class="header" onclick="header(event)"><img src="../img/header.png" alt="header" class="header-image"></button>
-                        <button onclick="link(event)"><img src="../img/link.png" alt="link" class="link-image"></button>
-                        <button onclick="image(event)"><img src="../img/image.png" alt="image" class="image-image"></button>
-                        <button onclick="help(event)"><img src="../img/ajuda.png" alt="help" class="help-image"></button>
+                        <button onclick="link(event)" class="link"><img src="../img/link.png" alt="link" class="link-image"></button>
+                        <button onclick="image(event)" class="image"><img src="../img/image.png" alt="image" class="image-image"></button>
+                        <button onclick="help(event)" class="help"><img src="../img/ajuda.png" alt="help" class="help-image"></button>
                     </div>
                     <div class="line"></div>
-                    <div>    
+                    <div class="text-input">    
                         <textarea id="post-content"></textarea>
                     </div>
                 </div>
@@ -28,59 +28,6 @@
                 <button id="cancel-button">Cancelar</button>
                 <button id="submit-button">Publicar</button>
                 </div>
-
-                <script>
-                    function bold(event) {
-                        event.preventDefault();
-                        var textarea = document.getElementById("post-content");
-                        var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-                        var newText = '<b>' + selectedText + '</b>';
-                        textarea.value = textarea.value.substring(0, textarea.selectionStart) + newText + textarea.value.substring(textarea.selectionEnd);
-                    }
-            
-                    function italic(event) {
-                        event.preventDefault();
-                        var textarea = document.getElementById("post-content");
-                        var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-                        var newText = '<i>' + selectedText + '</i>';
-                        textarea.value = textarea.value.substring(0, textarea.selectionStart) + newText + textarea.value.substring(textarea.selectionEnd);
-                    }
-            
-                    function header(event) {
-                        event.preventDefault();
-                        var textarea = document.getElementById("post-content");
-                        var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-                        var newText = '<h1>' + selectedText + '</h1>';
-                        textarea.value = textarea.value.substring(0, textarea.selectionStart) + newText + textarea.value.substring(textarea.selectionEnd);
-                    }
-            
-                    function link(event) {
-                        event.preventDefault();
-                        var url = prompt("Insira o URL do link:");
-                        if (url) {
-                            var textarea = document.getElementById("post-content");
-                            var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-                            var newText = '<a href="' + url + '">' + selectedText + '</a>';
-                            textarea.value = textarea.value.substring(0, textarea.selectionStart) + newText + textarea.value.substring(textarea.selectionEnd);
-                        }
-                    }
-            
-                    function image(event) {
-                        event.preventDefault();
-                        var url = prompt("Insira o URL da imagem:");
-                        if (url) {
-                            var textarea = document.getElementById("post-content");
-                            var newText = '<img src="' + url + '">';
-                            textarea.value += newText;
-                        }
-                    }
-            
-                    function help(event) {
-                        event.preventDefault();
-                        // Lógica para abrir a central de ajuda
-                        alert("Central de Ajuda");
-                    }
-                </script>
             </form>
         </div>
     </div>

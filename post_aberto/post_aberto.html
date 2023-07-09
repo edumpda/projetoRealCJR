@@ -4,6 +4,7 @@
     <title>Post Aberto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="post_aberto.css">
+    <link rel="stylesheet" href="../popup/popup.css">
 </head>
 
 <body>
@@ -59,11 +60,37 @@
           
         </div> 
         <div class="lower-container">
-          <button class="comment-button">
+          <button class="comment-button" id="post-button">
           Comentar
           </button>
         </div>
       </div>
     </main>
+    <div id="popup-overlay">
+      <div id="popup">
+          <form>
+              <div class="container-popup">
+                  <div class="mod-button">
+                      <button class="bold" onclick="bold(event)"><img src="../img/bold.png" alt="bold" class="bold-image"></button>
+                      <button class="italic" onclick="italic(event)"><img src="../img/italic.png" alt="italic" class="italic-image"></button>
+                      <button class="header" onclick="header(event)"><img src="../img/header.png" alt="header" class="header-image"></button>
+                      <button onclick="link(event)" class="link"><img src="../img/link.png" alt="link" class="link-image"></button>
+                      <button onclick="image(event)" class="image"><img src="../img/image.png" alt="image" class="image-image"></button>
+                      <button onclick="help(event)" class="help"><img src="../img/ajuda.png" alt="help" class="help-image"></button>
+                  </div>
+                  <div class="line"></div>
+                  <div class="text-input">    
+                      <textarea id="post-content"></textarea>
+                  </div>
+              </div>
+
+              <div class="button-group">
+              <button id="cancel-button">Cancelar</button>
+              <button id="submit-button">Publicar</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  <script src="../popup/popup.js"></script>
 </body>
 </html>

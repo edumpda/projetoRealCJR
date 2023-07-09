@@ -17,7 +17,7 @@
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 16px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -97,6 +97,8 @@
 
 .link {
     background: none;
+    background: transparent!important;
+    border: 0;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -110,6 +112,8 @@
 
 .image {
     background: none;
+    background: transparent!important;
+    border: 0;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -123,6 +127,8 @@
 
 .help {
     background: none;
+    background: transparent!important;
+    border: 0;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -148,9 +154,9 @@
     padding: 1.1rem 0.5rem 1rem 0rem;
 }
 
-.container {
+.container-popup {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 0fr 0fr auto;
     border-radius: 16px;
     background: #222E50;
     width: 523px;
@@ -160,6 +166,7 @@
 
 .mod-button {
     display: flex;
+    gap: 8px;
     justify-content: flex-start;
 }
 
@@ -171,4 +178,14 @@
 #post-content {
     grid-row: 3;
     background-color: inherit;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+.text-imput {
+    height: 100px;
+    display: flex;
+    width: 100%;
 }
