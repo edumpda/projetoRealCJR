@@ -63,15 +63,15 @@ main {
   
 }
 .container {
+  position: relative;
   justify-content: center;
   display: grid;
   width: 646px;
-  top: 87px;
+  top: 0px;
   margin: 8px 8px 0px 8px;
   border: 0px 1px 0px 1px;
   background-color: #222E50;
-  bottom;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 30% 1rem;
   border-radius: 32px 32px 0px 0px;
 }
 
@@ -82,6 +82,7 @@ hr.solid {
 }
 
 .return {
+  position: relative;
   margin: 5px 0 0 5px;
   transform: scale(120%);
   justify-self: left;
@@ -155,20 +156,27 @@ hr.solid {
 }
 
 .lower-container {
-  position: fixed;
+  position: absolute;
   height: 5rem;
   vertical-align: bottom;
+  align-content: center;
   background-color: #19192D;
   justify-content: center;
   display: grid;
   width: 646px;
-  height: fill;
   margin: 0px 8px 0px 8px;
   border-top: 2px solid #44445C;
   bottom: 0;
   padding: 1rem 1rem 1rem 1rem;
 }
 
+.comment-button {
+  font-weight: bold;
+  font-size: medium;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 16px;
+}
 /* .container-inferior {
   padding: 1rem;
   background-color: #222E50;
