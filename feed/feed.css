@@ -53,6 +53,7 @@ main {
   display: flex;
   align-items: center;
   top: 75px;
+  height: fit-content;
   bottom: 0px;
   border-left: 1px solid #7E7E7E;
   border-right: 1px solid #7E7E7E;
@@ -68,16 +69,19 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+.posts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-  height: 100%;
-  width: 50vw;
-  top: 0px;
+  width: 40vw;
   margin: 0px 0px 0px 0px;
   border: 0px 1px 0px 1px;
   /* background-color: #222E50; */
   padding: 0 0.5rem 0rem 0.5rem;
+  gap: 1rem;
 }
 
 hr.solid {
@@ -139,18 +143,19 @@ hr.solid {
 } */
 
 .conteudo {
-  margin-left: 50px;
+  margin-left: 59px;
 }
-
+/* 
 .posts {
   position: relative;
   display: flexbox;
   justify-content: center;
   align-items: center;
-  width: 100%
+  width: 100%;
   color: #fff;
   border-radius: 32px;
-}
+} */
+
 /* 
 .lower-container {
   position: absolute;
@@ -167,11 +172,14 @@ hr.solid {
   padding: 1rem 1rem 1rem 1rem;
 } */
 
+
+
 .comment-button {
-  margin-left: 50px;
+  margin-left: 59px;
   padding: 0;
   border: 0 none;
 }
+
 /* .container-inferior {
   padding: 1rem;
   background-color: #222E50;
