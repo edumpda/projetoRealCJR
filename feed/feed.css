@@ -172,9 +172,21 @@ hr.solid {
   padding: 1rem 1rem 1rem 1rem;
 } */
 
-
-
 .comment-button {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 1rem 0 1rem 8px;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #8BC34A;
+  border: 0px;
+}
+
+.abrir-post {
   margin-left: 59px;
   padding: 0;
   border: 0 none;
