@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="../popup/popup.css">
+</head>
+
+<body>
+    <header>
+        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <div class="entradas">
+            <a style="text-decoration:none;color:#222e50;" href="../cadastro/cadastro.html">Criar Conta</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../login/login.html">Entrar</a>
+        </div>
+    </header>
+    <main>      
+      <div class="background">
+        <div class="container"> 
+          <div class="return">
+            <!-- <a href="../feed/feed.html">
+              <img src="../img/arrow-left.png" alt="Retorna">
+            </a> -->
+          </div>
+          
+          
+          <div class = "posts">
+            <article class = "publi">
+              <div class="user-info">
+                <img class="profile" src="../img/user-prof.png" alt="Profile">
+                <p class="name">Joazin gamer</p>
+                <p class="divisor">·</p>
+                <p class="data">17 de mar</p>
+              </div>
+              
+              <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+              <button class="comment-button" id="post-button">
+                <img src="../img/arrow-left.png" alt="comentar">
+              </button>
+              
+            </article>
+            <article class = "publi">
+              <div class="user-info">
+                <img class="profile" src="../img/user-prof.png" alt="Profile">
+                <p class="name">Beltrana</p>
+                <p class="divisor">·</p>
+                <p class="data">17 de mar</p>
+              </div>  
+              <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+              <a href="../feed/feed.html">
+                <img src="../img/arrow-left.png" alt="Retorna">
+              </a>
+            </article>
+
+            <!-- <hr class="solid"> -->
+            <article class = "publi">
+              <div class="user-info">
+                <img class="profile" src="../img/user-prof.png" alt="Profile">
+                <p class="name">Fulana</p>
+                <p class="divisor">·</p>
+                <p class="data">17 de mar</p>
+              </div>
+              <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+            </article>
+            <!-- <hr class="solid"> -->
+          </div>
+          
+        </div> 
+        <!-- <div class="lower-container">
+          <button class="comment-button" id="post-button">
+          Comentar
+          </button>
+        </div> -->
+      </div>
+    </main>
+    <div id="popup-overlay">
+      <div id="popup">
+          <form>
+              <div class="container-popup">
+                  <div class="mod-button">
+                      <button class="bold" onclick="bold(event)"><img src="../img/bold.png" alt="bold" class="bold-image"></button>
+                      <button class="italic" onclick="italic(event)"><img src="../img/italic.png" alt="italic" class="italic-image"></button>
+                      <button class="header" onclick="header(event)"><img src="../img/header.png" alt="header" class="header-image"></button>
+                      <button onclick="link(event)" class="link"><img src="../img/link.png" alt="link" class="link-image"></button>
+                      <button onclick="image(event)" class="image"><img src="../img/image.png" alt="image" class="image-image"></button>
+                      <button onclick="help(event)" class="help"><img src="../img/ajuda.png" alt="help" class="help-image"></button>
+                  </div>
+                  <div class="line"></div>
+                  <div class="text-input">    
+                      <textarea id="post-content"></textarea>
+                  </div>
+              </div>
+
+              <div class="button-group">
+              <button id="cancel-button">Cancelar</button>
+              <button id="submit-button">Publicar</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  <script src="../popup/popup.js"></script>
+</body>
+</html>
