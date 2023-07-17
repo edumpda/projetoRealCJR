@@ -50,11 +50,13 @@ main {
 
 .background {
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 75px;
   bottom: 0px;
-  border-left: 1px solid #D9D9D9;
-  border-right: 1px solid #D9D9D9;
-  border-color: #D9D9D9;
+  border-left: 1px solid #7E7E7E;
+  border-right: 1px solid #7E7E7E;
+  border-color: #7E7E7E;
   
   /* padding-bottom: ; */
   /* height: 100%; */
@@ -64,16 +66,18 @@ main {
 }
 .container {
   position: relative;
-  justify-content: center;
-  display: grid;
-  width: 646px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 50vw;
   top: 0px;
-  margin: 8px 8px 0px 8px;
+  margin: 0px 0px 0px 0px;
   border: 0px 1px 0px 1px;
   /* background-color: #222E50; */
-  padding: 1rem 1rem 30% 1rem;
-  border-radius: 32px 32px 0px 0px;
-  
+  padding: 0 0.5rem 0rem 0.5rem;
 }
 
 hr.solid {
@@ -90,13 +94,15 @@ hr.solid {
 }
 
 .publi {
-  margin-top: 1rem;
-  justify-self: center;
+  display: flexbox;
+  justify-content: center;
+  width: auto;
+  height: auto;
   background-color: #222E50;
   color:#fff;
-  padding: 20px 16px 16px 16px;
+  padding: 1em 1em 0.5em 1em;
   border-radius: 32px;
-  
+  margin: 0rem 0 0rem 0;
 }
 
 .user-info {
@@ -137,11 +143,13 @@ hr.solid {
 }
 
 .posts {
-  gap: 1rem;
-  width: 92%;
-  justify-self: center;
+  position: relative;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  width: 100%
   /* background-color: #222E50; */
-  color:#fff;
+  color: #fff;
   /* padding: 20px 16px 16px 16px; */
   border-radius: 32px;
   
@@ -164,6 +172,8 @@ hr.solid {
 
 .comment-button {
   margin-left: 50px;
+  padding: 0;
+  border: 0 none;
 }
 /* .container-inferior {
   padding: 1rem;
