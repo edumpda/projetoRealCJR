@@ -3,15 +3,15 @@
 <head>
     <title>Tela de Cadastro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../static/cadastro.css">
 </head>
 
 <body>
     <header>
         <img class="cjr" src="../img/logo-small.png" alt="Logo">
         <div class="entradas">
-            <a style="text-decoration:none;color:#222e50;" href="../conta/criarConta.html">Criar Conta</a>
-            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../Login/login.html">Entrar</a>
+            <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../templates/login.html">Entrar</a>
         </div>
     </header>
     <main>      
@@ -25,7 +25,7 @@
               </div>
               <div class="container-genero">
                 <label for="genero"><img src="../img/genero.png" alt="Mostrar"></label>
-                <select name="Gênero" id="genero">
+                <select name="Gênero" id="Gênero" name="Gênero">
                   <option value="select" selected>Gênero</option>
                   <option value="fem">Feminino</option>
                   <option value="masc">Masculino</option>
@@ -35,17 +35,17 @@
               </div>
               
               <div class="container-cargo">
-                <input type="text" id="registration" name="registration" required placeholder="Cargo">
+                <input type="text" id="cargo" name="cargo" required placeholder="Cargo">
               </div>
               <div class="container-email">
-                <input type="text" id="registration" name="registration" required placeholder="Email">
+                <input type="text" id="email" name="email" required placeholder="Email">
               </div>
               <div class="container-senha">
-                <input type="password" id="registration" name="registration" required placeholder="Senha">
+                <input type="password" id="password" name="password" required placeholder="Senha">
               </div>
             </div> 
             <div class="container-link">
-              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../senha/esqueceuSenha.html"><strong> Acesse aqui!</strong></a></p>
+              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../templates/login.html"><strong> Acesse aqui!</strong></a></p>
               <button type="submit">Cadastrar</button>
             </div>
           </form>

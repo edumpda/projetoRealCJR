@@ -45,7 +45,7 @@ def cadastro():
         new_user = User(id=id, username=username, senha=senha, gender=gender, email=email, cargo=cargo)
         db.session.add(new_user)
         db.session.commit()
-
+        print("Done!")
         return redirect(url_for('/'))
 
     return render_template('cadastro.html')
@@ -54,23 +54,23 @@ def cadastro():
 def login():
     if request.method == 'POST':
         # tem que criar a lógica de autenticacao de usuario
-        # username = request.form['registration']
-        # password = request.form['password']
-        # user = User.query.filter_by(username=username, senha=password).first()
-        # if user:
-        #     return redirect(url_for('feed'))
-        # else:
-        #     return redirect(url_for('login'))
+        username = request.form['registration']
+        password = request.form['password']
+        user = User.query.filter_by(username=username, senha=password).first()
+        if user:
+            return redirect(url_for('feed'))
+        else:
+            return redirect(url_for('login'))
 
     return render_template('login.html')
 
 @app.route('/recup', methods=['GET', 'POST'])
 def recup():
     if request.method == 'POST':
-        #new_password = request.form['password']
-        #user.senha = new_password
-        #db.session.commit()
-        #return redirect(url_for('login'))
+        new_password = request.form['password']
+        user.senha = new_password
+        db.session.commit()
+        return redirect(url_for('login'))
 
 
     return render_template('recup.html')
