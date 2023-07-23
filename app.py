@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
+'''app'''
 from datetime import datetime
 import uuid
+from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bdCJR.db'
@@ -42,7 +43,7 @@ def cadastro():
         email = request.form['email']
         cargo = request.form['cargo']
 
-        new_user = User(id=id, username=username, senha=senha, gender=gender, email=email, cargo=cargo)
+        new_user = User(id=user_id, username=username, senha=senha, gender=gender, email=email, cargo=cargo)
         db.session.add(new_user)
         db.session.commit()
         print("Done!")
@@ -53,15 +54,17 @@ def cadastro():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        print("Acessou login")
         # tem que criar a lógica de autenticacao de usuario
         username = request.form['registration']
         password = request.form['password']
         user = User.query.filter_by(username=username, senha=password).first()
+        print("Done 2!")
         if user:
             return redirect(url_for('feed'))
         else:
             return redirect(url_for('login'))
-
+        
     return render_template('login.html')
 
 @app.route('/recup', methods=['GET', 'POST'])
