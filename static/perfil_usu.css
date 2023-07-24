@@ -107,11 +107,23 @@ main {
 
   .profile {
     width: 150px;
-    height: 190px;
-    margin-top: -85px;
+    height: 150px;
+    display: flex;
+    margin-top: -100px;
+    border-radius: 75px;
   }
 
-  .assessora {
+  .username {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: normal;
+    color:#fff;
+    margin: 0rem, 0rem, 0rem, 0rem;
+  }
+
+  .cargo {
     display: block;
     width: 24px;
     height: 24px;
@@ -141,6 +153,14 @@ main {
     color:#fff
   }
 
+  .container-superior{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
   .container-inferior{
     width: 92%;
     background-color: #222E50;
@@ -160,13 +180,18 @@ main {
   }
 
   .retangulo{
+    align-self: center;
     width: 100%;
+    padding-left: 1px;
+    padding-right: 1px;
     height: 151px;
     background-color: #222E50;
 
   }
 
   .imagens{
+    display: flex;
+    flex-direction: column;
     position: relative;
     border-bottom: 1px solid #D9D9D9;
     padding: 1.5rem 4rem;

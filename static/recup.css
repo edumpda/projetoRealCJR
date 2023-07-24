@@ -131,6 +131,16 @@ main {
     cursor: text;
   }
 
+  .password-toggle {
+    position: relative;
+    translate: 19rem;
+    transform: translateY(-3rem);
+    max-height: 24px;
+    max-width: 24px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
   .login-container {
     align-items: center;
     background-color: #71767B;

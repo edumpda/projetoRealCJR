@@ -35,11 +35,12 @@
 
                 <div class="imagens">
                     <button type="editar">Editar Perfil</button>
-                    <img class="profile" src="../static/img/Fotousuario.png" alt="Profile">
-                    <img class="assessora" src="../static/img/predio.png" alt="Assessora">
-                    <span class="image-name">Assessora</span>
+                    <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                    <h2 class="username">{{ current_user.username }}</h1>
+                    <img class="cargo" src="../static/img/predio.png" alt="cargo">
+                    <span class="image-name">{{ current_user.cargo }}</span>
                     <img class="contato" src="../static/img/carta.png" alt="contato">
-                    <span class="image-name">Joazin.gamer.23@cjr.org.br</span>
+                    <span class="image-name">{{ current_user.email }}</span>
                 </div>
                 <div class="textos1">
                     <p>Publicações</p>
@@ -50,7 +51,7 @@
                 <div class="publi1">
                     <div class="user-info">
                         <img class="profile" src="../static/img/user-prof.png" alt="Profile">
-                        <p class="name">Joazin gamer</p>
+                        <p class="name">{{ current_user.username }}</p>
                         <p class="divisor">·</p>
                         <p class="data">17 de mar</p>
                     </div>
@@ -65,7 +66,7 @@
             <div class="publi2">
                 <div class="user-info">
                     <img class="profile" src="../static/img/user-prof.png" alt="Profile">
-                    <p class="name">Joazin gamer</p>
+                    <p class="name">{{ current_user.username }}</p>
                     <p class="divisor">·</p>
                     <p class="data">17 de mar</p>
                 </div>
