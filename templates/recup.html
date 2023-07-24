@@ -4,33 +4,50 @@
     <title>Tela de Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/recup.css">
+    <script>
+      function mostrarSenha(pass) {
+        var passwordInput = document.getElementById(pass);
+        var passwordToggle = document.getElementById("password-toggle");
+  
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          passwordToggle.textContent = "Ocultar";
+        } else {
+          passwordInput.type = "password";
+          passwordToggle.textContent = "Mostrar";
+        }
+      }
+    </script>
 </head>
 
 <body>
     <header>
-        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
         <div class="entradas">
-          <a style="text-decoration:none;color:#222e50;" href="../templates/cadastro.html">Criar Conta</a>
-          <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../templates/login.html">Entrar</a>
+          <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+          <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
         </div>
     </header>
     <main>      
-      <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
+      <img class="logo-big" src="../static/img/LOGO-CJR-big.png" alt="logo-big">
       <div class="container"> 
           <form action="/login" method="post">
             <h2 class="titulo">Bem vindo de volta,<br>fulano! escolha sua<br>nova senha</h2>   
             <div class="container-entradas">
               <div class="container-imput">
                 <label for="nome">Senha nova</label>
-                <input type="text" id="registration" name="registration">
+                <input type="password" id="password" name="registration">
+                <img id="password-toggle" class="password-toggle" src="../static/img/eye-closed.png" alt="Mostrar" onclick="mostrarSenha('password')">
               </div>
               <div class="container-imput">
                 <label for="nome">Digite novamente a senha</label>
-                <input type="password" id="password" name="password">
+                
+                <input type="password" id="password-confirm" name="password-confirm">
+                <img id="password-toggle" class="password-toggle" src="../static/img/eye-closed.png" alt="Mostrar" onclick="mostrarSenha('password-confirm')">
               </div>
             </div> 
             <div class="container-link">
-              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../templates/login.html"><strong> Acesse aqui!</strong></a></p>
+              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="login"><strong> Acesse aqui!</strong></a></p>
               <button type="submit">Cadastrar</button>
             </div>
           </form>
