@@ -96,15 +96,16 @@ def feed():
     else:
         return render_template('feed.html', username=None)
 
-@app.route('/perfil')
+@app.route('/perfil_usuario')
 @login_required
 def perfil_usuario():
-    return render_template('perfil_usuario.html', username=current_user.username)
+    return render_template('perfil_usu.html', username=current_user.username)
 
 @app.route('/post_aberto')
 @login_required
 def post_aberto():
     return render_template('post_aberto.html')
+
 @app.route('/logout')
 @login_required
 def logout():

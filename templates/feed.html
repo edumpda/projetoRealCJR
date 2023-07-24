@@ -13,7 +13,7 @@
         <div class="entradas">
             {% if current_user.is_authenticated %}
                 <div class="profile-info">
-                    <a style="text-decoration:none;color:#ffffff;" href="perfil_usu">{{ current_user.username }}</a>
+                    <a style="text-decoration:none;color:#ffffff;" href="{{ url_for('perfil_usuario') }}">{{ current_user.username }}</a>
                     <img class="profile-pic" src="../static/img/user-prof.png" alt="Profile">
                     <a href="{{ url_for('logout') }}">
                         <img src="../static/img/log-out.png" alt="Sair">
