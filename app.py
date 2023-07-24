@@ -102,10 +102,13 @@ def feed():
 def perfil_usuario():
     return render_template('perfil_usu.html', username=current_user.username)
 
-@app.route('/post_aberto')
+@app.route('/post_aberto/<int:post_id>')
 @login_required
-def post_aberto():
-    return render_template('post_aberto.html')
+def post_aberto(post_id):
+    post = Post.query.get(post_id)
+    if post:
+        return render_template('post_aberto.html', post=post)
+
 
 @app.route('/create_post', methods=['POST'])
 def create_post():
