@@ -93,13 +93,30 @@
                         </a>
                     </article>
                 </div>
+                <div class="posts">
+                    {% for post in posts %}
+                    <article class="publi">
+                        <!-- Exibir informações do post, como autor, data e conteúdo -->
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">{{ post.user_id }}</p>
+                            <p class="divisor">·</p>
+                            <p class="data">{{ post.created_at.strftime('%d de %b') }}</p>
+                        </div>
+                        <p class="conteudo">{{ post.content }}</p>
+                        <a class="abrir-post" href="{{ url_for('post_aberto') }}">
+                            <img src="../static/img/comment-baloon.png" alt="comentar">
+                        </a>
+                    </article>
+                    {% endfor %}
+                </div>
             </div> 
         </div>
     </main>
 
     <div id="popup-overlay">
       <div id="popup">
-          <form>
+          <form id="postForm">
               <div class="container-popup">
                   <div class="mod-button">
                       <button class="bold" onclick="bold(event)"><img src="../static/img/bold.png" alt="bold" class="bold-image"></button>

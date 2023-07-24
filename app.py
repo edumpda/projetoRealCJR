@@ -1,7 +1,7 @@
 '''app'''
 from datetime import datetime
 import uuid
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user, logout_user
 
@@ -92,7 +92,8 @@ def recup():
 @app.route('/feed')
 def feed():
     if current_user.is_authenticated:
-        return render_template('feed.html', username=current_user.username)
+        posts = Post.query.all()
+        return render_template('feed.html', username=current_user.username, posts=posts)
     else:
         return render_template('feed.html', username=None)
 
@@ -105,6 +106,21 @@ def perfil_usuario():
 @login_required
 def post_aberto():
     return render_template('post_aberto.html')
+
+@app.route('/create_post', methods=['POST'])
+def create_post():
+    data = request.get_json()
+    content = data['content']
+    new_post = Post(user_id=1, content=content)
+    db.session.add(new_post)
+    db.session.commit()
+
+    return jsonify({
+        'post_id': new_post.post_id,
+        'user_id': new_post.user_id,
+        'content': new_post.content,
+        'created_at': new_post.created_at.strftime('%Y-%m-%d %H:%M:%S')
+    })
 
 @app.route('/logout')
 @login_required
