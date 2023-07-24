@@ -3,27 +3,43 @@
 /* inicio do header*/
 
 header {
-    background: #8BC34A;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    padding: 0rem 3rem 0rem 3rem
+  background: #8BC34A;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0rem 3rem 0rem 3rem
+  
 }
 .cjr {
-  background-color: #D9D9D9;
-  padding: 8px 40px 8px 40px;
-  border-radius: 16px;
+background-color: #D9D9D9;
+padding: 8px 40px 8px 40px;
+border-radius: 16px;
 }
 
 .entradas {
-  
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: normal;
-  
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: normal;
+
+}
+
+
+
+.profile-info {
+display: flex;
+align-items: center;
+gap: 1rem;
+height: fit-content;
+}
+
+.profile-pic {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 30px;
 }
 
 /* inicio do body */

@@ -3,12 +3,12 @@
 /* inicio do header*/
 
 header {
-    background: #8BC34A;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    padding: 0rem 3rem 0rem 3rem
+  background: #8BC34A;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0rem 3rem 0rem 3rem
 }
 .cjr {
   background-color: #D9D9D9;

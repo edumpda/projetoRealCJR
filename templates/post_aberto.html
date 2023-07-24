@@ -11,8 +11,18 @@
     <header>
         <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
         <div class="entradas">
-          <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
-          <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
+          {% if current_user.is_authenticated %}
+            <div class="profile-info">
+              <a style="text-decoration:none;color:#ffffff;" href="perfil_usu">{{ current_user.username }}</a>
+              <img class="profile-pic" src="../static/img/user-prof.png" alt="Profile">
+              <a href="{{ url_for('logout') }}">
+                <img src="../static/img/log-out.png" alt="Sair">
+              </a>
+            </div>
+          {% else %}
+            <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
+          {% endif %}
         </div>
     </header>
     <main>      
