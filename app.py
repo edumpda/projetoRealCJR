@@ -101,6 +101,10 @@ def feed():
 def perfil_usuario():
     return render_template('perfil_usuario.html', username=current_user.username)
 
+@app.route('/post_aberto')
+@login_required
+def post_aberto():
+    return render_template('post_aberto.html')
 @app.route('/logout')
 @login_required
 def logout():
