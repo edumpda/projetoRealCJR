@@ -111,9 +111,10 @@ hr.solid {
 }
 
 .publi {
-  display: flexbox;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: auto;
+  width: 37.8vw;
   height: auto;
   background-color: #222E50;
   color:#fff;
@@ -162,16 +163,15 @@ hr.solid {
 .conteudo {
   margin-left: 59px;
 }
-/* 
+
 .posts {
   position: relative;
   display: flexbox;
   justify-content: center;
   align-items: center;
-  width: 100%;
   color: #fff;
   border-radius: 32px;
-} */
+}  
 
 /* 
 .lower-container {
