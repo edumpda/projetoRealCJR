@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tela de Login</title>
+    <title>Recuperar senha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/recup.css">
     <script>
@@ -34,6 +34,10 @@
           <form action="/login" method="post">
             <h2 class="titulo">Bem vindo de volta,<br>fulano! escolha sua<br>nova senha</h2>   
             <div class="container-entradas">
+              <div class="container-input">
+                <label for="nome">Nome de usuário</label>
+                <input type="text" id="registration" name="registration">
+              </div>
               <div class="container-imput">
                 <label for="nome">Senha nova</label>
                 <input type="password" id="password" name="registration">
@@ -41,7 +45,6 @@
               </div>
               <div class="container-imput">
                 <label for="nome">Digite novamente a senha</label>
-                
                 <input type="password" id="password-confirm" name="password-confirm">
                 <img id="password-toggle" class="password-toggle" src="../static/img/eye-closed.png" alt="Mostrar" onclick="mostrarSenha('password-confirm')">
               </div>
