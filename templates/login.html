@@ -22,29 +22,29 @@
 
 <body>
     <header>
-        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
         <div class="entradas">
-          <a style="text-decoration:none;color:#222e50;" href="../templates/cadastro.html">Criar Conta</a>
-          <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../templates/login.html">Entrar</a>
+          <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+          <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
         </div>
     </header>
     <main>      
         <div class="container"> 
           
             <form action="/login" method="post">
-              <img class="profile" src="../img/profile.png" alt="Profile"> 
+              <img class="profile" src="../static/img/profile.png" alt="Profile"> 
                 <div class="login-container">
-                  <img class="icon" src="../img/icon.png" alt="Icon">
+                  <img class="icon" src="../static/img/icon.png" alt="Icon">
                   <input type="text" id="registration" name="registration" required placeholder="Login"><br><br>
                 </div>
                 <div class="password-container">
-                  <img class="lock" src="../img/lock-small.png" alt="Icon">
+                  <img class="lock" src="../static/img/lock-small.png" alt="Icon">
                   <input type="password" id="password" name="password" required placeholder="Senha">
-                  <img id="password-toggle" class="password-toggle" src="../img/eye-closed.png" alt="Mostrar" onclick="mostrarSenha()">
+                  <img id="password-toggle" class="password-toggle" src="../static/img/eye-closed.png" alt="Mostrar" onclick="mostrarSenha()">
                 
                 </div>
                 
-                <p><a style="color:#111E3E;margin: 1rem;" href="../templates/recup.html"><strong>Esqueceu a senha?</strong></a></p>
+                <p><a style="color:#111E3E;margin: 1rem;" href="recup"><strong>Esqueceu a senha?</strong></a></p>
                 <button type="submit">Entrar</button>
             </form>
         </div> 

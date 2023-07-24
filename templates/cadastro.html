@@ -8,23 +8,26 @@
 
 <body>
     <header>
-        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
         <div class="entradas">
             <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
-            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../templates/login.html">Entrar</a>
+            <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
         </div>
     </header>
     <main>      
-      <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
+      <img class="logo-big" src="../static/img/LOGO-CJR-big.png" alt="logo-big">
       <div class="container"> 
           <form action="/cadastro" method="post">
-            <img class="profile" src="../img/profilePhoto.png" alt="Profile">   
+            <img class="profile" src="../static/img/profilePhoto.png" alt="Upload">
+            <!-- <label for="input-file"></label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file"> -->
+            <!-- <img class="profile" src="../static/img/profilePhoto.png" alt="Upload">    -->
             <div class="container-entradas">
               <div class="container-nome">
                 <input type="text" id="registration" name="registration" required placeholder="Nome">
               </div>
             <div class="container-genero">
-                <label for="genero"><img src="../img/genero.png" alt="Mostrar"></label>
+                <label for="genero"><img src="../static/img/genero.png" alt="Mostrar"></label>
                 <select name="gender" id="Gênero">
                     <option value="select" selected>Gênero</option>
                     <option value="fem">Feminino</option>
@@ -45,7 +48,7 @@
               </div>
             </div> 
             <div class="container-link">
-              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="../templates/login.html"><strong> Acesse aqui!</strong></a></p>
+              <p style="margin: 0;">Possui conta?<a style="color:#111E3E;" href="login"><strong> Acesse aqui!</strong></a></p>
               <button type="submit">Cadastrar</button>
             </div>
           </form>

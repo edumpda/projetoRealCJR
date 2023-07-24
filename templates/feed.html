@@ -9,99 +9,105 @@
 
 <body>
     <header>
-        <img class="cjr" src="../img/logo-small.png" alt="Logo">
+        <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
         <div class="entradas">
             {% if current_user.is_authenticated %}
-                <img class="profile" src="../img/user-prof.png" alt="Profile">
-                <p style="margin: 0; color: #ffffff;">Bem-vindo, {{ current_user.username }}!</p>
-                <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="{{ url_for('logout') }}">Sair</a>
+                <div class="profile-info">
+                    <a style="text-decoration:none;color:#ffffff;" href="perfil_usu">{{ current_user.username }}</a>
+                    <img class="profile-pic" src="../static/img/user-prof.png" alt="Profile">
+                    <a href="{{ url_for('logout') }}">
+                        <img src="../static/img/log-out.png" alt="Sair">
+                    </a>
+                </div>
             {% else %}
-                <a style="text-decoration:none;color:#222e50;" href="../templates/cadastro.html">Criar Conta</a>
-                <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="../templates/login.html">Entrar</a>
+                <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+                <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
             {% endif %}
-        </div>
+      </div>
     </header>
     <main>      
-      <div class="background">
-        <div class="container">
-          <div class="upper-bit">
-            <div class="comentar">
-              <!-- <button class="comment-button" id="post-button">
-                Criar publicação
-              </button> -->
-            </div>
-          </div>
-          <div class="posts">
-              <article class = "publi">
-                <div class="user-info">
-                  <img class="profile" src="../img/user-prof.png" alt="Profile">
-                  <p class="name">Joazin gamer</p>
-                  <p class="divisor">·</p>
-                  <p class="data">17 de mar</p>
-                </div>
-                
-                <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
-                
-                <a class="abrir-post" href="../templates/post_aberto.html">
-                  <img src="../img/comment-baloon.png" alt="comentar">
-                </a>
-                
-              </article>
-              <article class = "publi">
-                <div class="user-info">
-                  <img class="profile" src="../img/user-prof.png" alt="Profile">
-                  <p class="name">Beltrana</p>
-                  <p class="divisor">·</p>
-                  <p class="data">17 de mar</p>
-                </div>  
-                <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
-                
-                <a class="abrir-post" href="../templates/post_aberto.html">
-                  <img src="../img/comment-baloon.png" alt="comentar">
-                </a>
-              </article>
+        <div class="background">
+            <div class="container">
+                <!-- {% if current_user.is_authenticated %} -->
+                    <div class="upper-bit">
+                        <div class="comentar">
+                            <button class="comment-button" id="post-button">
+                                Criar publicação
+                            </button>
+                        </div>
+                    </div>
+                <!-- {% else %}
+                {% endif %} -->
+                <div class="posts">
+                    <article class = "publi">
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">Joazin gamer</p>
+                            <p class="divisor">·</p>
+                            <p class="data">17 de mar</p>
+                        </div>
+                        <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+                        <a class="abrir-post" href="post_aberto">
+                            <img src="../static/img/comment-baloon.png" alt="comentar">
+                        </a>
+                    
+                    </article>
+                    <article class = "publi">
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">Joazin gamer</p>
+                            <p class="divisor">·</p>
+                            <p class="data">17 de mar</p>
+                        </div>  
+                        <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+                        
+                        <a class="abrir-post" href="post_aberto">
+                            <img src="../static/img/comment-baloon.png" alt="comentar">
+                        </a>
+                    </article>
 
-              <!-- <hr class="solid"> -->
-              <article class = "publi">
-                <div class="user-info">
-                  <img class="profile" src="../img/user-prof.png" alt="Profile">
-                  <p class="name">Fulana</p>
-                  <p class="divisor">·</p>
-                  <p class="data">17 de mar</p>
+                    <!-- <hr class="solid"> -->
+                    <article class = "publi">
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">Joazin gamer</p>
+                            <p class="divisor">·</p>
+                            <p class="data">17 de mar</p>
+                        </div>
+                        <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+                        <a class="abrir-post" href="post_aberto">
+                            <img src="../static/img/comment-baloon.png" alt="comentar">
+                        </a>
+                    </article>
+                    <!-- <hr class="solid"> -->
+                    <article class = "publi">
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">Joazin gamer</p>
+                            <p class="divisor">·</p>
+                            <p class="data">17 de mar</p>
+                        </div>
+                        <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
+                        <a class="abrir-post" href="post_aberto">
+                            <img src="../static/img/comment-baloon.png" alt="comentar">
+                        </a>
+                    </article>
                 </div>
-                <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
-                <a class="abrir-post" href="../templates/post_aberto.html">
-                  <img src="../img/comment-baloon.png" alt="comentar">
-                </a>
-              </article>
-              <!-- <hr class="solid"> -->
-              <article class = "publi">
-                <div class="user-info">
-                  <img class="profile" src="../img/user-prof.png" alt="Profile">
-                  <p class="name">Fulana</p>
-                  <p class="divisor">·</p>
-                  <p class="data">17 de mar</p>
-                </div>
-                <p class="conteudo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin</p>
-                <a class="abrir-post" href="../templates/post_aberto.html">
-                  <img src="../img/comment-baloon.png" alt="comentar">
-                </a>
-              </article>
-          </div>
-        </div> 
-      </div>
+            </div> 
+        </div>
     </main>
+
     <div id="popup-overlay">
       <div id="popup">
           <form>
               <div class="container-popup">
                   <div class="mod-button">
-                      <button class="bold" onclick="bold(event)"><img src="../img/bold.png" alt="bold" class="bold-image"></button>
-                      <button class="italic" onclick="italic(event)"><img src="../img/italic.png" alt="italic" class="italic-image"></button>
-                      <button class="header" onclick="header(event)"><img src="../img/header.png" alt="header" class="header-image"></button>
-                      <button onclick="link(event)" class="link"><img src="../img/link.png" alt="link" class="link-image"></button>
-                      <button onclick="image(event)" class="image"><img src="../img/image.png" alt="image" class="image-image"></button>
-                      <button onclick="help(event)" class="help"><img src="../img/ajuda.png" alt="help" class="help-image"></button>
+                      <button class="bold" onclick="bold(event)"><img src="../static/img/bold.png" alt="bold" class="bold-image"></button>
+                      <button class="italic" onclick="italic(event)"><img src="../static/img/italic.png" alt="italic" class="italic-image"></button>
+                      <button class="header" onclick="header(event)"><img src="../static/img/header.png" alt="header" class="header-image"></button>
+                      <button onclick="link(event)" class="link"><img src="../static/img/link.png" alt="link" class="link-image"></button>
+                      <button onclick="image(event)" class="image"><img src="../static/img/image.png" alt="image" class="image-image"></button>
+                      <button onclick="help(event)" class="help"><img src="../static/img/ajuda.png" alt="help" class="help-image"></button>
                   </div>
                   <div class="line"></div>
                   <div class="text-input">    
