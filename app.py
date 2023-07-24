@@ -111,7 +111,8 @@ def post_aberto():
 def create_post():
     data = request.get_json()
     content = data['content']
-    new_post = Post(user_id=1, content=content)
+    username = data['currentUsername']
+    new_post = Post(user_id=username, content=content)
     db.session.add(new_post)
     db.session.commit()
 

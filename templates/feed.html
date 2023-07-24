@@ -25,7 +25,8 @@
             {% endif %}
       </div>
     </header>
-    <main>      
+    <main>
+        <div id="current-user" data-username="{{ current_user.username }}" style="display: none;"></div>
         <div class="background">
             <div class="container">
                 <!-- {% if current_user.is_authenticated %} -->

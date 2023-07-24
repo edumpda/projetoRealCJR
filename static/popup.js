@@ -4,6 +4,7 @@ document.getElementById("post-button").addEventListener("click", function() {
 
 document.getElementById("submit-button").addEventListener("click", function() {
   var content = document.getElementById("post-content").value;
+  var currentUsername = document.getElementById("current-user").dataset.username;
 
   fetch('/create_post', {
     method: 'POST',
@@ -11,7 +12,8 @@ document.getElementById("submit-button").addEventListener("click", function() {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      content: content
+        content: content,
+        currentUsername: currentUsername
     })
   })
   .then(response => response.json())
@@ -104,4 +106,3 @@ function help(event) {
     // Lógica para abrir a central de ajuda
     alert("Central de Ajuda");
 }
-
