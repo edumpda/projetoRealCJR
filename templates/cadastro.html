@@ -17,22 +17,22 @@
     <main>      
       <img class="logo-big" src="../img/LOGO-CJR-big.png" alt="logo-big">
       <div class="container"> 
-          <form action="/login" method="post">
+          <form action="/cadastro" method="post">
             <img class="profile" src="../img/profilePhoto.png" alt="Profile">   
             <div class="container-entradas">
               <div class="container-nome">
                 <input type="text" id="registration" name="registration" required placeholder="Nome">
               </div>
-              <div class="container-genero">
+            <div class="container-genero">
                 <label for="genero"><img src="../img/genero.png" alt="Mostrar"></label>
-                <select name="Gênero" id="Gênero" name="Gênero">
-                  <option value="select" selected>Gênero</option>
-                  <option value="fem">Feminino</option>
-                  <option value="masc">Masculino</option>
-                  <option value="outro">Outro</option>
-                  <option value="nao-informar">Prefiro não informar</option>
+                <select name="gender" id="Gênero">
+                    <option value="select" selected>Gênero</option>
+                    <option value="fem">Feminino</option>
+                    <option value="masc">Masculino</option>
+                    <option value="outro">Outro</option>
+                    <option value="nao-informar">Prefiro não informar</option>
                 </select>
-              </div>
+            </div>
               
               <div class="container-cargo">
                 <input type="text" id="cargo" name="cargo" required placeholder="Cargo">
