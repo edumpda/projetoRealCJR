@@ -2,13 +2,36 @@
 <html>
 <head>
     <title>Editar Post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/feed.css">
 </head>
 <body>
-    <h1>Editar Post</h1>
-    <form method="POST" action="{{ url_for('editar_post', post_id=post.post_id) }}">
-        <textarea name="content" rows="4" cols="50">{{ post.content }}</textarea>
-        <br>
-        <button type="submit">Salvar</button>
-    </form>
+    <header>
+        <img class="cjr" src="../static/img/logo-small.png" alt="Logo">
+        <div class="entradas">
+            {% if current_user.is_authenticated %}
+                <div class="profile-info">
+                    <a style="text-decoration:none;color:#ffffff;" href="{{ url_for('perfil_usuario') }}">{{ current_user.username }}</a>
+                    <img class="profile-pic" src="../static/img/user-prof.png" alt="Profile">
+                    <a href="{{ url_for('logout') }}">
+                        <img src="../static/img/log-out.png" alt="Sair">
+                    </a>
+                </div>
+            {% else %}
+                <a style="text-decoration:none;color:#222e50;" href="cadastro">Criar Conta</a>
+                <a style="text-decoration:none;color:#ffffff;padding: 15px 22px 14px 21px;background-color:#222E50;border-radius: 16px;margin:1rem;" href="login">Entrar</a>
+            {% endif %}
+      </div>
+    </header>
+    <main>
+        <div class="background">
+            <p class="title">Editar Post<p>
+            <form class="edit-box" method="POST" action="{{ url_for('editar_post', post_id=post.post_id) }}">
+                <textarea name="content" rows="4" cols="50">{{ post.content }}</textarea>
+                <br>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

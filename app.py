@@ -80,12 +80,21 @@ def login():
 
 @app.route('/recup', methods=['GET', 'POST'])
 def recup():
+    print(request.method)
     if request.method == 'POST':
+        username = request.form['registration']
+        user = User.query.filter_by(username=username)
         new_password = request.form['password']
-        user.senha = new_password
-        db.session.commit()
-        return redirect(url_for('login'))
-
+        new_password_confirm = request.form['password-confirm']
+        print(user.senha)
+        if new_password == new_password_confirm:
+            user.senha = new_password
+            db.session.commit()
+            print(f"{user.senha} {new_password} {new_password_confirm}")
+            return redirect(url_for('login'))
+            
+        else:
+            return render_template('recup.html')
 
     return render_template('recup.html')
 

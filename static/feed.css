@@ -210,7 +210,29 @@ hr.solid {
 }
 
 .lower {
+  padding: 0;
+  border: 0 none;
   display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.edit-del {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.edit-button{
+  padding: 0;
+  border: 0 none;
+  background-color: rgba(0,0,0,0);
+}
+
+.delete-button {
+  padding: 0;
+  border: 0 none;
+  background-color: rgba(0,0,0,0);
 }
 
 /* .container-inferior {

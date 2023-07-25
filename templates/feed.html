@@ -54,18 +54,18 @@
                             <a class="abrir-post" href="{{ url_for('post_aberto', post_id=post.post_id) }}">
                                 <img src="../static/img/comment-baloon.png" alt="comentar">
                             </a>
-                            <div class="edit-del">
-                                {% if current_user.is_authenticated and current_user.username == post.user_id %}
-                                    
-                                    <button class="edit-button" onclick="editPost({{ post.post_id }})">
-                                        <img src="" alt="Editar">
-                                    </button>
-                                    <button class="delete-button" onclick="deletePost({{ post.post_id }})">
-                                        <img src="" alt="Excluir">
-                                    </button>
-                                    
-                                {% endif %}
-                            </div>
+                            
+                            {% if current_user.is_authenticated and current_user.username == post.user_id %}
+                                
+                                <button class="edit-button" onclick="editPost({{ post.post_id }})">
+                                    <img src="../static/img/edit-button.png" alt="Editar">
+                                </button>
+                                <button class="delete-button" onclick="deletePost({{ post.post_id }})">
+                                    <img src="../static/img/trash-button.png" alt="Excluir">
+                                </button>
+                                
+                            {% endif %}
+                            
                         </div>
                     </article>
                     {% endfor %}
