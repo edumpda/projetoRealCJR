@@ -209,6 +209,10 @@ hr.solid {
   border: 0 none;
 }
 
+.lower {
+  display: flex;
+}
+
 /* .container-inferior {
   padding: 1rem;
   background-color: #222E50;
