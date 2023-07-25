@@ -97,11 +97,11 @@ def recup():
 
 @app.route('/feed')
 def feed():
+    posts = Post.query.all()
     if current_user.is_authenticated:
-        posts = Post.query.all()
         return render_template('feed.html', username=current_user.username, posts=posts)
     else:
-        return render_template('feed.html', username=None)
+        return render_template('feed.html', username=None, posts=posts)
 
 @app.route('/perfil_usuario')
 @login_required
