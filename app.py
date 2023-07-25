@@ -106,8 +106,9 @@ def perfil_usuario():
 @login_required
 def post_aberto(post_id):
     post = Post.query.get(post_id)
+    comments = Comments.query.filter_by(post_id=post_id).all()
     if post:
-        return render_template('post_aberto.html', post=post)
+        return render_template('post_aberto.html', post=post, comment=comments)
 
 
 @app.route('/create_post', methods=['POST'])
@@ -125,6 +126,42 @@ def create_post():
         'content': new_post.content,
         'created_at': new_post.created_at.strftime('%Y-%m-%d %H:%M:%S')
     })
+
+@app.route('/create_comment', methods=['POST'])
+def create_comment():
+    data = request.get_json()
+    content = data['content']
+    username = data['currentUsername']
+    post_id = data['post_id']
+    new_comment = Comments(post_id=post_id, user_id=username, content_coments=content)
+    db.session.add(new_comment)
+    db.session.commit()
+
+    return jsonify({
+        'post_id': new_comment.comment_id,
+        'user_id': new_comment.user_id,
+        'content': new_comment.content_coments
+    })
+
+@app.route('/editar_post/<int:post_id>', methods=['GET', 'POST'])
+@login_required
+def editar_post(post_id):
+    post = Post.query.get(post_id)
+    if request.method == 'POST':
+        new_content = request.form['content']
+        post.content = new_content
+        db.session.commit()
+        return redirect(url_for('feed'))
+    return render_template('editar_post.html', post=post)
+
+@app.route('/excluir_post/<int:post_id>')
+@login_required
+def excluir_post(post_id):
+    post = Post.query.get(post_id)
+    if post:
+        db.session.delete(post)
+        db.session.commit()
+    return redirect(url_for('feed'))
 
 @app.route('/logout')
 @login_required

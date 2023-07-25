@@ -34,7 +34,7 @@
                 <img src="../static/img/arrow-left.png" alt="Retorna">
               </a>
             </div>
-            <div class="main-publi">
+            <div class="main-publi" data-post-id="{{ post.id }}">
               <div class="user-info">
                 <img class="profile" src="../static/img/user-prof.png" alt="Profile">
                 <p class="name">{{ post.user_id }}</p>
@@ -67,6 +67,21 @@
               </article>
               <hr class="solid">
             </div>
+            <div class="comments">
+                {% if comments %}
+                    {% for comment in comments %}
+                    <article class="publi">
+                        <div class="user-info">
+                            <img class="profile" src="../static/img/user-prof.png" alt="Profile">
+                            <p class="name">{{ comment.user_id }}</p>
+                        </div>
+                        <p class="conteudo">{{ comment.content_coments }}</p>
+                    </article>
+                    {% endfor %}
+                {% else %}
+                    <p>Nenhum comentário encontrado.</p>
+                {% endif %}
+            </div>
 
           </div>
           <div class="lower-container">
@@ -80,7 +95,7 @@
     </main>
     <div id="popup-overlay">
       <div id="popup">
-          <form>
+          <form id="postForm">
               <div class="container-popup">
                   <div class="mod-button">
                       <button class="bold" onclick="bold(event)"><img src="../static/img/bold.png" alt="bold" class="bold-image"></button>
@@ -103,6 +118,6 @@
           </form>
       </div>
   </div>
-  <script src="../static/popup.js"></script>
+  <script src="../static/popupcomment.js"></script>
 </body>
 </html>

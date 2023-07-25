@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Post</title>
+</head>
+<body>
+    <h1>Editar Post</h1>
+    <form method="POST" action="{{ url_for('editar_post', post_id=post.post_id) }}">
+        <textarea name="content" rows="4" cols="50">{{ post.content }}</textarea>
+        <br>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
