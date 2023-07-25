@@ -4,44 +4,47 @@ document.getElementById("post-button").addEventListener("click", function() {
 
 document.getElementById("submit-button").addEventListener("click", function() {
   var content = document.getElementById("post-content").value;
-  var currentUsername = document.getElementById("current-user").dataset.username;
+  var currentUsername = document.querySelector(".name").textContent;
+  var postDiv = document.querySelector(".main-publi");
+  var postId = postDiv.getAttribute("data-post-id");
 
-  fetch('/create_post', {
+  fetch('/create_comment', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
         content: content,
-        currentUsername: currentUsername
+        currentUsername: currentUsername,
+        post_id: postId
     })
   })
   .then(response => response.json())
   .then(data => {
     console.log(data);
 
-    // Criar o elemento HTML do novo post e adicionar ao feed
-    var postElement = document.createElement('article');
-    postElement.className = 'publi';
+    // Criar o elemento HTML do novo comentário e adicionar ao post
+    var commentElement = document.createElement('article');
+    commentElement.className = 'publi';
 
     var user_info = document.createElement('div');
     user_info.className = 'user-info';
     user_info.innerHTML = `
       <img class="profile" src="../static/img/user-prof.png" alt="Profile">
-      <p class="name">${current_user.username}</p>
+      <p class="name">${currentUsername}</p>
       <p class="divisor">·</p>
       <p class="data">${data.created_at}</p>
     `;
-    postElement.appendChild(user_info);
+    commentElement.appendChild(user_info);
 
     var contentElement = document.createElement('p');
     contentElement.className = 'conteudo';
     contentElement.textContent = data.content;
-    postElement.appendChild(contentElement);
+    commentElement.appendChild(contentElement);
 
-    // Adicionar o novo post no início do feed
-    var feed = document.querySelector('.posts');
-    feed.insertBefore(postElement, feed.firstChild);
+    // Adicionar o novo comentário ao post
+    var commentsContainer = document.querySelector('.comments'); // Modifique para selecionar o container correto de comentários
+    commentsContainer.appendChild(commentElement);
 
     closeModal();
   })
@@ -105,25 +108,4 @@ function help(event) {
     event.preventDefault();
     // Lógica para abrir a central de ajuda
     alert("Central de Ajuda");
-}
-
-function deletePost(postId) {
-    fetch(`/excluir_post/${postId}`, {
-        method: 'GET',
-    })
-    .then(response => {
-        if (response.ok) {
-            // Recarrega a página após a exclusão
-            window.location.reload();
-        } else {
-            console.error('Erro ao excluir o post');
-        }
-    })
-    .catch(error => {
-        console.error('Erro ao excluir o post:', error);
-    });
-}
-
-function editPost(postId) {
-    window.location.href = `/editar_post/${postId}`;
 }
